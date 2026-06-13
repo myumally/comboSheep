@@ -11,8 +11,17 @@ config_version=5
 [application]
 
 config/name="comboSheep"
+run/main_scene="uid://c34nellad4cxc"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout=""
+
+[autoload]
+
+SoundId="*uid://1sbqd3mpv5f5"
 
 [physics]
 

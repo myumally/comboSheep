@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://d1w7fh3qdh4d0"]
+
+[ext_resource type="Script" uid="uid://c0v62bb5byqgj" path="res://scripts/button.gd" id="1_8usyc"]
+[ext_resource type="Script" uid="uid://ud74h1qrfxv1" path="res://scripts/sound_data.gd" id="2_w6f3e"]
+
+[node name="Button" type="Button" unique_id=1771944466]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_8usyc")
+color = Color(1, 1, 1, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=133375546]
+
+[node name="SoundData" type="Node" parent="." unique_id=1482665970]
+script = ExtResource("2_w6f3e")
+metadata/_custom_type_script = "uid://ud74h1qrfxv1"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

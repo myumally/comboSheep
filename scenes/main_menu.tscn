@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://c34nellad4cxc"]
+
+[ext_resource type="Script" uid="uid://bjcmx3exiw2sa" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+
+[sub_resource type="Animation" id="Animation_l6cm7"]
+resource_name = "menu"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ekxnf"]
+_data = {
+&"menu": SubResource("Animation_l6cm7")
+}
+
+[node name="MainMenu" type="PanelContainer" unique_id=20979003]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l6cm7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2081189195]
+root_node = NodePath("../TextureRect")
+libraries/ = SubResource("AnimationLibrary_ekxnf")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=602460611]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1128631685]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1092359818]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(1, 0.55292374, 0.44957495, 1)
+theme_override_font_sizes/font_size = 145
+text = "Combo Sheep"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1230399905]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(1, 0.8332807, 0.7730142, 1)
+theme_override_colors/font_focus_color = Color(0.49895662, 0.18927437, 0.027982978, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.68781596, 0.5858103, 1)
+theme_override_colors/font_hover_color = Color(0.7583924, 0.37832794, 1.92523e-07, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.9764706, 0.6313726, 0.56078434, 1)
+theme_override_font_sizes/font_size = 67
+text = "START"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

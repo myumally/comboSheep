@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://hmwxqk0cqdea"]
+
+[ext_resource type="PackedScene" uid="uid://bqusbdq37aj8j" path="res://nodes/interface.tscn" id="1_o5qli"]
+
+[node name="PanelContainer" type="PanelContainer" unique_id=1602114327]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1569493542]
+layout_mode = 2
+
+[node name="Interface" parent="VBoxContainer" unique_id=1488869725 instance=ExtResource("1_o5qli")]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+size_flags_vertical = 3
