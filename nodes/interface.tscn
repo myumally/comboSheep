@@ -12,8 +12,13 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vw1pl")
 
-[node name="ComboList" parent="." unique_id=178251469 instance=ExtResource("2_20nwq")]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1404682543]
 layout_mode = 2
 
-[node name="SoundBoard" parent="." unique_id=582001370 instance=ExtResource("2_fisyv")]
+[node name="ComboList" parent="VBoxContainer" unique_id=178251469 instance=ExtResource("2_20nwq")]
 layout_mode = 2
+size_flags_vertical = 0
+
+[node name="SoundBoard" parent="VBoxContainer" unique_id=582001370 instance=ExtResource("2_fisyv")]
+layout_mode = 2
+size_flags_vertical = 3

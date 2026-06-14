@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cex8jyvwjg4u6"]
+
+[ext_resource type="Script" uid="uid://3jcqcl7ruc1s" path="res://scripts/combo_list.gd" id="1_luhyc"]
+
+[node name="ComboList" type="HBoxContainer" unique_id=178251469]
+script = ExtResource("1_luhyc")

@@ -1,5 +1,7 @@
 extends GridContainer
 
+signal sound_selected(id)
+
 # animals
 var horse = SoundData.new()
 var chicken = SoundData.new()
@@ -48,7 +50,7 @@ func _ready():
 		i += 1
 
 func _on_sound_selected(id: SoundId.SoundId):
-	print("Son reçu :", id)
+	sound_selected.emit(id)
 	match id:
 		SoundId.SoundId.HORSE:
 			pass
