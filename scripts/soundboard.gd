@@ -38,7 +38,7 @@ func _ready():
 	laugh.update_with_path(SoundId.SoundId.LAUGH, "res://assets/sounds/effects/Laugh.ogg")
 	bug2manette.update_with_path(SoundId.SoundId.BUG2MANETTE, "res://assets/sounds/effects/di_bug.mp3")
 	
-	effects = [thunder, gun, sword, explosion, laugh, bug2manette]
+	effects = [thunder, gun, sword, explosion]
 	animals = [horse, chicken, wolf, goat, cat]
 	actives = [horse, chicken, cat, thunder, laugh, bug2manette]
 	
@@ -51,17 +51,39 @@ func _ready():
 
 func _on_sound_selected(id: SoundId.SoundId):
 	sound_selected.emit(id)
-	match id:
-		SoundId.SoundId.HORSE:
+	match id: # todo ajouter les effets
+		SoundId.SoundId.THUNDER:
 			pass
-		SoundId.SoundId.CHICKEN:
+		SoundId.SoundId.GUN:
 			pass
-		SoundId.SoundId.WOLF:
+		SoundId.SoundId.SWORD:
 			pass
-		SoundId.SoundId.GOAT:
+		SoundId.SoundId.EXPLOSION:
 			pass
-		SoundId.SoundId.CAT:
-			pass
+		SoundId.SoundId.LAUGH:
+			_on_laugh()
+		SoundId.SoundId.BUG2MANETTE:
+			_on_bug()
+
+func _on_laugh() -> void: #todo faire du pseudo-alétoire parce que trop chiant là
+	actives = [laugh, bug2manette]
+	for i in range(2):
+		var animal = animals.pick_random()
+		while animal in actives:
+			animal = animals.pick_random()
+		actives.append(animal)
+		var effect = effects.pick_random()
+		while effect in actives:
+			effect = effects.pick_random()
+		actives.append(effect)
+	actives.shuffle()
+	var i = 0
+	for button in get_children():
+		button.set_sound(actives[i])
+		i += 1
+
+func _on_bug() -> void:
+	pass
 
 func update(id: SoundId.SoundId, stream: AudioStream, button: Button ) -> void:
 	button.update(id, stream)

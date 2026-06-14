@@ -8,8 +8,8 @@ var current: int
 signal valid()
 
 func _ready():
-	animaux = ["Cheval", "Poule"] #, "Loup", "Chèvre"]
-	animaux_id = [SoundId.SoundId.HORSE, SoundId.SoundId.CHICKEN] #, SoundId.SoundId.WOLF, SoundId.SoundId.GOAT]
+	animaux = ["Cheval", "Poule", "Loup", "Chèvre"]
+	animaux_id = [SoundId.SoundId.HORSE, SoundId.SoundId.CHICKEN, SoundId.SoundId.WOLF, SoundId.SoundId.GOAT]
 	combo = []
 	current = 0
 	pass

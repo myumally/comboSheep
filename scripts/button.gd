@@ -20,6 +20,6 @@ func set_sound(sd: SoundData ) -> void:
 	audio_player.stream = sound_data._stream
 
 func _on_pressed() -> void:
-	print("Button clicked")
 	audio_player.play()
+	await audio_player.finished
 	sound_selected.emit(sound_data._id)
