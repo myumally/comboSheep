@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bbxuu1m73wflg"]
+
+[ext_resource type="PackedScene" uid="uid://d1w7fh3qdh4d0" path="res://nodes/Button.tscn" id="1_midwp"]
+[ext_resource type="Script" uid="uid://b0d6qfxy1ukyt" path="res://scripts/soundboard.gd" id="1_tvkvb"]
+
+[node name="SoundBoard" type="GridContainer" unique_id=582001370]
+columns = 3
+script = ExtResource("1_tvkvb")
+
+[node name="Button1" parent="." unique_id=1771944466 instance=ExtResource("1_midwp")]
+layout_mode = 2
+color = Color(0.40392157, 0, 1, 1)
+
+[node name="Button2" parent="." unique_id=1875254341 instance=ExtResource("1_midwp")]
+layout_mode = 2
+color = Color(0, 0.40392157, 1, 1)
+
+[node name="Button3" parent="." unique_id=1553635797 instance=ExtResource("1_midwp")]
+layout_mode = 2
+color = Color(0, 1, 0.40392157, 1)
+
+[node name="Button4" parent="." unique_id=901476869 instance=ExtResource("1_midwp")]
+layout_mode = 2
+color = Color(0.40392157, 1, 0, 1)
+
+[node name="Button5" parent="." unique_id=1525373282 instance=ExtResource("1_midwp")]
+layout_mode = 2
+color = Color(1, 0.40392157, 0, 1)
+
+[node name="Button6" parent="." unique_id=41788047 instance=ExtResource("1_midwp")]
+layout_mode = 2
+color = Color(1, 0, 0.40392157, 1)

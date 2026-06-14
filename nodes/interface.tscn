@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://bqusbdq37aj8j"]
 
 [ext_resource type="Script" uid="uid://q8ef3hnit07m" path="res://scripts/interface.gd" id="1_vw1pl"]
-[ext_resource type="PackedScene" uid="uid://d1w7fh3qdh4d0" path="res://nodes/Button.tscn" id="2_fisyv"]
+[ext_resource type="PackedScene" uid="uid://cex8jyvwjg4u6" path="res://nodes/ComboList.tscn" id="2_20nwq"]
+[ext_resource type="PackedScene" uid="uid://bbxuu1m73wflg" path="res://nodes/soundboard.tscn" id="2_fisyv"]
 
 [node name="Interface" type="PanelContainer" unique_id=1488869725]
 anchors_preset = 15
@@ -11,30 +12,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vw1pl")
 
-[node name="GridContainer" type="GridContainer" parent="." unique_id=571413181]
+[node name="ComboList" parent="." unique_id=178251469 instance=ExtResource("2_20nwq")]
 layout_mode = 2
-columns = 3
 
-[node name="Button1" parent="GridContainer" unique_id=1771944466 instance=ExtResource("2_fisyv")]
+[node name="SoundBoard" parent="." unique_id=582001370 instance=ExtResource("2_fisyv")]
 layout_mode = 2
-color = Color(0.40392157, 0, 1, 1)
-
-[node name="Button2" parent="GridContainer" unique_id=233444312 instance=ExtResource("2_fisyv")]
-layout_mode = 2
-color = Color(0, 0.40392157, 1, 1)
-
-[node name="Button3" parent="GridContainer" unique_id=1472804527 instance=ExtResource("2_fisyv")]
-layout_mode = 2
-color = Color(0, 1, 0.40392157, 1)
-
-[node name="Button4" parent="GridContainer" unique_id=1765906791 instance=ExtResource("2_fisyv")]
-layout_mode = 2
-color = Color(0.40392157, 1, 0, 1)
-
-[node name="Button5" parent="GridContainer" unique_id=1608374185 instance=ExtResource("2_fisyv")]
-layout_mode = 2
-color = Color(1, 0.40392157, 0, 1)
-
-[node name="Button6" parent="GridContainer" unique_id=2030198708 instance=ExtResource("2_fisyv")]
-layout_mode = 2
-color = Color(1, 0, 0.40392157, 1)
